@@ -6,6 +6,12 @@ class StudentsController < ApplicationController
   end
 
   def show
+    @student = Student.find params[:id]
+  end
+
+  def activate_student
+    # @student = Student.find params[:id]
+    redirect "students/show"
   end
 
   private
